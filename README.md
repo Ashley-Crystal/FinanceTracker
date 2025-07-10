@@ -1,94 +1,98 @@
-# FinanceTracker
+Here's your properly formatted and professional README.md file for the FinanceTracker project:
 
-The Personal Finance Dashboard is a cross-platform web application designed to help individuals efficiently manage their finances, especially during life transitions such as moving to a new city. The app will provide features like tracking expenses, setting budgets, monitoring savings goals, and receiving weekly financial summary emails. The system will be integrated with trusted financial APIs to ensure accurate and real-time data processing.
+💸 FinanceTracker – Personal Finance Dashboard
+FinanceTracker is a cross-platform web application designed to help individuals manage their finances efficiently, especially during life transitions like moving to a new city. The app enables users to track expenses, set and monitor budgets, achieve savings goals, and receive weekly financial summary emails. Trusted financial APIs ensure accurate and real-time data integration.
 
-Purpose and Goals :
+🎯 Purpose and Goals
+The main objective of FinanceTracker is to simplify personal finance management through automation and visual insights.
 
-The main objective of the Personal Finance Dashboard is to simplify financial management. It enables users to:
+Key Features:
+📘 Record daily transactions
 
-    Record daily transactions
-    
-    Create and track budgets across spending categories
-    
-    Get visual reports of their monthly expenses
-    
-    Receive automatic weekly emails summarizing their spending habits
-    
-    Monitor savings goals and calculate net worth over time
-    
-    Convert currencies when budgeting in a new country
-    
-    This tool is particularly useful for individuals relocating to a new city, where keeping control over spending is essential.
+🧾 Create and monitor budgets across spending categories
 
+📊 View monthly expense reports with visual charts
 
-🚧 Phase 1 – Core Budgeting Features
-Goal: Build a functional budgeting web app with Firefly III integration.
+📧 Receive automatic weekly summary emails
 
-Tasks:
+💰 Monitor savings goals and calculate net worth over time
 
-Set up a backend (Node.js/Express or Python/Flask) connecting to Firefly III:
+🌍 Convert currencies when budgeting in a new country
 
-Authenticate via OAuth2 or personal access token
+This tool is especially useful for individuals relocating to a new city, where managing expenses is crucial.
 
-Implement endpoints and UIs for:
+🚧 Phase 1 – Core Budgeting Features
+🎯 Goal: Build a functional budgeting web app integrated with Firefly III.
 
-Transaction management (view/create/edit/delete)
+✅ Tasks:
+Set up a backend (Node.js/Express or Python/Flask) to connect with Firefly III.
 
-Budget creation and assignment per category
+Authenticate via OAuth2 or Personal Access Token.
+
+Implement backend endpoints and frontend UIs for:
+
+Transaction management (create, view, edit, delete)
+
+Budget creation and category assignment
 
 Monthly spending reports with category breakdown
 
-UI in React or Vue:
+Build frontend UI in React or Vue:
 
-Forms for entering transactions and budgets
+Forms for entering transactions and setting budgets
 
-Dashboard views with tables and charts
+Dashboard views with interactive charts and tables
 
-Outcomes:
-A user can log expenses, set monthly budgets per category, and review summarized spending via a dashboard.
+📌 Outcomes:
+Users can log expenses, create budgets per category, and view summarized spending on an interactive dashboard.
 
-Phase 2 – Email Summaries Feature
-Goal: Add scheduled weekly emails summarizing spending vs budget.
+✉️ Phase 2 – Email Summaries Feature
+🎯 Goal: Enable scheduled weekly email summaries of user spending.
 
-Tasks:
-
-Use Firefly III API to fetch weekly transactions and summarize expenses per category.
+✅ Tasks:
+Use Firefly III API to fetch weekly transactions and summarize expenses.
 
 Integrate Mailgun API:
 
-Sign up (free tier: up to 100 emails/day, 1 domain) 
-Use their REST API (or SMTP) to send HTML emails with summary charts/tables
+Sign up for the free tier (100 emails/day, 1 domain)
 
-Add backend scheduler (cron or node-cron):
+Use REST or SMTP to send summary emails (HTML format with charts/tables)
 
-Automatically run summary job weekly (e.g. every Sunday at 8pm)
+Add a backend scheduler (e.g., cron or node-cron):
 
-Format data and send via authenticated Mailgun call
+Automatically run summary generation job (e.g., Sundays at 8 PM)
 
-Outcomes:
-Users get a weekly email with total spending, category breakdown, and budget alerts—keeping them on track.
+Format and send the email via Mailgun
 
-Phase 3 – Net Worth & Savings Dashboard
-Goal: Enhance the app by integrating YNAB for asset and savings tracking.
+📌 Outcomes:
+Users receive a clear summary of their weekly spending habits with charts and budget alerts directly in their inbox.
 
-Tasks:
+📈 Phase 3 – Net Worth & Savings Dashboard
+🎯 Goal: Add integration with YNAB to track savings and net worth.
 
-Add YNAB OAuth integration or personal access token
+✅ Tasks:
+Implement YNAB API integration using OAuth or Personal Access Token
 
-Fetch:
+Fetch the following data:
 
-User’s budgets, account balances, and categories
+User budgets, account balances, liabilities, and goals
 
-Total assets vs liabilities and goal statuses
+Add frontend enhancements:
 
-UI enhancements:
+Line chart showing net worth over time
 
-Net worth over time line chart
+Progress bars for savings goal tracking
 
-Savings goal tracking and projection
+Unified dashboard combining Firefly and YNAB data
 
-Combined dashboard view with Firefly and YNAB data
+📌 Outcomes:
+Users gain a full picture of their financial health—budgets, savings, expenses, and net worth—all in one place.
 
-Outcomes:
-Users can view their total financial health in one place—with budgets, spending, savings, and net worth visualized.
-
+🧰 Example Tech Stack
+Layer	Technology
+Backend	Node.js + Express (or Python + Flask)
+Frontend	React or Vue.js + Charting (e.g., Chart.js, Recharts)
+Jobs	node-cron or Celery (Python)
+Auth	OAuth2 or API Token (Firefly III & YNAB)
+Email API	Mailgun REST / SMTP (with DKIM/SPF setup)
+Deployment	Vercel, Heroku, or AWS Free Tier
